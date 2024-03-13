@@ -30,26 +30,25 @@ const Hero = () => {
 
   return (
     <section
-      className="header relative h-screen w-full bg-primary"
+      className="header relative min-h-screen w-full bg-primary"
       id="heroSection"
     >
       <nav
         className={`fixed right-0 left-0 top-0 z-[85] bg-${
           navBackground === "white" ? "white" : "primary"
         }`}
-        // style={{ backgroundColor: navBackground }}
       >
         <div className="flex items-center justify-between w-11/12 lg:w-[85%] mx-auto py-5">
           <a
             href="#"
             className={`text-${
               navBackground === "transparent" ? "white" : "primary"
-            } font-black text-3xl`}
+            } font-black text-2xl sm:text-3xl`}
           >
             vivacity
           </a>
 
-          <div className="hidden md:flex items-center gap-9">
+          <div className="hidden md:flex items-center w-full gap-9">
             <ul className="flex gap-4">
               <li>
                 <a
@@ -105,7 +104,7 @@ const Hero = () => {
           </div>
           <button
             onClick={toggleMobileNav}
-            className={`block md:hidden text-2xl border-2 ${
+            className={`block md:hidden text-lg xs:text-xl sm:text-2xl border-2 ${
               navBackground === "white" ? "border-primary" : "border-white"
             } rounded-md p-1 font-bold text-${
               navBackground === "white" ? "primary" : "white"
@@ -123,12 +122,12 @@ const Hero = () => {
             <h2 className="text-4xl sm:text-5xl md:text-[86px] leading-[1.2] md:leading-[1.05] tracking-tight text-white font-extrabold mb-4 sm:mb-8">
               It's Digital Ticketing Simplified.
             </h2>
-            <h5 className="text-white text-2xl sm:text-3xl font-semibold">
+            <h5 className="text-white text-xl xs:text-2xl sm:text-3xl font-semibold">
               Experience it now.
             </h5>
           </div>
           <div className="pt-6 md:pt-20 relative">
-            <img src={hero} alt="hero" className="" />
+            <img src={hero} alt="hero" className="w-full h-[150%] sm:h-full" />
           </div>
         </div>
       </div>
